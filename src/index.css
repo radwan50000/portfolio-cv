@@ -41,17 +41,19 @@
         @apply w-[400px] h-[600px] rounded-md bg-purple200 overflow-hidden;
     }
 
+
+
+    .card .card-details{
+        @apply bg-purple200Trans w-full h-0
+        flex-col items-center justify-center gap-8
+        flex select-none overflow-hidden;
+        transition: .4s;
+    }
     .card:nth-child(odd){
         @apply translate-y-16;
     }
     .card:nth-child(even){
         @apply translate-y-[-16px];
-    }
-
-    .card .card-details{
-        @apply bg-purple200Trans w-full h-0
-        flex-col items-center justify-center gap-8
-        transition-[.4s] flex select-none overflow-hidden;
     }
 
     .card .card-details a{
@@ -63,7 +65,11 @@
     }
 
     .card:hover .card-details{
-        @apply h-full shadow-2xl shadow-purple200;
+        @apply h-full;
+    }
+
+    .card:hover{
+        box-shadow: 0 0 10px #bb7de7;
     }
 
     .about-card{

@@ -76,6 +76,7 @@ const About = () => {
                     opacity: 1,
                     stagger: 1,
                     ease: 'power1.out',
+                    duration: 2,
                     scrollTrigger: {
                         trigger: '#text-first-box',
                         start: 'top bottom',
