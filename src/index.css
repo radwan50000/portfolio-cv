@@ -1,1 +1,39 @@
 @import 'tailwindcss';
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+
+.cairo{
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+            "slnt" 0;
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+
+
+@theme{
+    --color-pageColor: #272327;
+    --color-purple200: #bb7de7;
+    --color-purple500: #413149;
+    --color-textColor: #d0ccd9;
+}
+
+body{
+    @apply bg-pageColor overflow-x-hidden;
+}
