@@ -22,7 +22,6 @@ const FullPage = () => {
     window.addEventListener('mousemove',(e) => {
         mouseShape.current.style.left = (e.clientX - (mouseShape.current.offsetWidth / 2)) + 'px';
         mouseShape.current.style.top = (e.clientY - (mouseShape.current.offsetHeight / 2)) + 'px';
-        console.log(e)
     })
 
     return (

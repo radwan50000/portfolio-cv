@@ -85,14 +85,48 @@ const About = () => {
                 }
             )
 
+            t1.fromTo(
+                '#about-section',
+                {
+                    scale: 1,
+                    opacity: 1,
+                },
+                {
+                    scale: 10,
+                    opacity: 0,
+                    ease: 'power1.out',
+                    scrollTrigger: {
+                        trigger: '#end-about-scroll',
+                        start: 'top bottom',
+                        end: 'top top',
+                        scrub: true,
+                    }
+                }
+            )
+            t1.fromTo(
+                '#about-section',
+                {
+                    position: 'sticky'
+                },
+                {
+                    position: 'relative',
+                    scrollTrigger: {
+                        trigger: '#remove-about-sticky',
+                        start: 'top bottom',
+                        end: 'top 50%',
+                        scrub: true,
+                    }
+                }
+            )
+
         }
     ,[]);
 
     return (
         <>
-            <section className='sticky top-0 pt-8 flex flex-col gap-24 w-[90%] mx-auto'>
+            <section id='about-section' className='sticky top-0 pt-8 flex flex-col gap-8 w-[90%] mx-auto'>
                 <div
-                    className='flex flex-row items-center gap-16  '>
+                    className='flex flex-row items-center gap-8'>
                     <h1
                         className='text-purple200 text-8xl about-header font-bold'>
                         ABOUT ME</h1>
@@ -133,6 +167,8 @@ const About = () => {
             <div
                 id='text-first-box'
                 className='h-[200vh]'></div>
+            <div id='end-about-scroll' className='h-[100vh]'></div>
+            <div id='remove-about-sticky' className='h-[100vh]'></div>
         </>
     )
 }
