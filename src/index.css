@@ -30,10 +30,45 @@
 @theme{
     --color-pageColor: #272327;
     --color-purple200: #bb7de7;
+    --color-purple200Trans: rgba(187, 125, 231, 0.18);
     --color-purple500: #413149;
     --color-textColor: #d0ccd9;
+}
+
+@layer component{
+    .card{
+        @apply w-[400px] h-[600px] rounded-md bg-purple200 overflow-hidden;
+    }
+
+    .card:nth-child(odd){
+        @apply translate-y-16;
+    }
+    .card:nth-child(even){
+        @apply translate-y-[-16px];
+    }
+
+    .card .card-details{
+        @apply bg-purple200Trans w-full h-full
+        flex-col items-center justify-center gap-8
+        transition-[.4s] hidden select-none;
+    }
+
+    .card .card-details a{
+        @apply w-fit flex;
+    }
+
+    .card .card-details a img{
+        @apply w-[50px] ;
+    }
+
+    .card:hover .card-details{
+        display: flex;
+    }
+
 }
 
 body{
     @apply bg-pageColor overflow-x-hidden;
 }
+
+

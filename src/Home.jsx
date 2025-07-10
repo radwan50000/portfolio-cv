@@ -1,7 +1,7 @@
 import {gsap} from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from "gsap/all";
-import header_img from '../public/header_img.svg';
+import img from './assets/4.gif';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,6 +30,21 @@ const Home = () => {
             width: '30%',
             duration: 1,
         })
+
+        t2.fromTo
+        (
+            '#img',
+            {
+                translateX: '100%',
+                opacity: 0,
+            },
+            {
+                duration: 1,
+                translateX: '0',
+                opacity: 1,
+                ease: 'back.out'
+            }
+        )
         t2.fromTo('.h-text',
             {
                 opacity: 0,
@@ -41,29 +56,22 @@ const Home = () => {
                 duration: 0.8,
                 stagger: 0.4,
             })
-        t2.fromTo('#img',
+        t2.fromTo('#ring',
             {
-                opacity: 0,
-                translateX: '100%',
+                translateX: '-150%',
+                left: 0,
+                top: '60%'
             },
             {
-                opacity: 1,
-                translateX: '0%',
-                duration: 0.8,
+                translateX: '0%'
             })
 
         t1.fromTo('#ring',{
             opacity: 1,
-        },{
-            width: '5000px',
-            height: '5000px',
             borderRadius: '100%',
-            left: '150%',
-            top: '0%',
+        },{
+            rotate: 400,
             opacity: 1,
-            translateX: '-50%',
-            translateY: '-50%',
-            rotate: 360,
             ease: 'linear',
             scrollTrigger:{
                 trigger:'.end-header',
@@ -72,11 +80,38 @@ const Home = () => {
                 scrub: true,
             }
         })
-        gsap.to('#ring',{
+
+        t1.fromTo('.header',{
+            opacity: 1,
+        },{
             opacity: 0,
+            ease: 'linear',
+            scrollTrigger:{
+                trigger:'.end-header',
+                start: 'top bottom',
+                end: 'top 50%',
+                scrub: true,
+            }
+        })
+
+        gsap.to('.header',{
+            position: 'relative',
             scrollTrigger:{
                 trigger:'.end-header',
                 start: 'top 40%',
+                end: 'top 50%',
+                scrub: true,
+            }
+        })
+
+        t1.fromTo('#ring',{
+            opacity: 1,
+        },{
+            opacity: 0,
+            ease: 'linear',
+            scrollTrigger:{
+                trigger:'.end-header',
+                start: 'top bottom',
                 end: 'top 50%',
                 scrub: true,
             }
@@ -86,7 +121,7 @@ const Home = () => {
 
     return (
         <>
-            <header className="w-full h-dvh">
+            <header className="w-full h-dvh sticky top-0 pt-4 header">
                 <div className="w-[90%] mx-auto">
                     <nav className="flex flex-row items-center my-8 gap-8 justify-start">
                         <div id='first-purple-line' className='w-0/12 h-1 bg-purple200'></div>
@@ -116,22 +151,25 @@ const Home = () => {
                                 Passionate about crafting user-friendly and visually engaging websites. I focus on creating smooth, responsive experiences that align with modern design and performance standards. Detail-oriented, reliable, and always aiming to deliver intuitive and accessible interfaces that users enjoy.
                             </p>
                         </div>
-                        {/*<img*/}
-                        {/*    className='w-3/12'*/}
-                        {/*    id='img'*/}
-                        {/*    src={header_img}*/}
-                        {/*    alt='programmer image' />*/}
+                        <img
+                            id='img'
+                            src={img}
+                            alt='animated image for header'
+                            className='w-3/12'/>
+
                     </div>
+
                 </div>
-                <div
-                    id='ring'
-                    className='w-60 h-60 rounded-full opacity-0 z-90
+
+            </header>
+            <div
+                id='ring'
+                className='w-60 h-60 rounded-full opacity-0 z-90
                                 border-dashed border-3 border-purple200
                                 fixed left-0 translate-x-[-50%] top-[60%] bg-pageColor'>
 
-                </div>
-            </header>
-            <div className='w-full h-dvh end-header'>
+            </div>
+            <div className='w-full  end-header' style={{height: 'calc(100vh / 2)'}}>
 
             </div>
         </>
