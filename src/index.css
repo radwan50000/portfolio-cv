@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'lenis/dist/lenis.css';
 
 .roboto {
     font-family: "Roboto", sans-serif;
@@ -30,7 +31,7 @@
 @theme{
     --color-pageColor: #272327;
     --color-purple200: #bb7de7;
-    --color-purple200Trans: rgba(187, 125, 231, 0.18);
+    --color-purple200Trans: rgba(255, 255, 255, 0.18);
     --color-purple500: #413149;
     --color-textColor: #d0ccd9;
 }
@@ -48,9 +49,9 @@
     }
 
     .card .card-details{
-        @apply bg-purple200Trans w-full h-full
+        @apply bg-purple200Trans w-full h-0
         flex-col items-center justify-center gap-8
-        transition-[.4s] hidden select-none;
+        transition-[.4s] flex select-none overflow-hidden;
     }
 
     .card .card-details a{
@@ -62,8 +63,23 @@
     }
 
     .card:hover .card-details{
-        display: flex;
+        @apply h-full shadow-2xl shadow-purple200;
     }
+
+    .about-card{
+        @apply rounded-md p-8 w-full text-textColor
+        leading-[150%] text-2xl ;
+    }
+
+    .about-card .text-box{
+        @apply w-6/12;
+    }
+
+    .about-card:nth-child(even){
+        direction: rtl;
+    }
+
+
 
 }
 

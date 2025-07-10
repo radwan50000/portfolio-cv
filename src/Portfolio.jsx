@@ -77,12 +77,29 @@ const Portfolio = () => {
             {
                 opacity: 0,
                 translateY: '50%',
-                duration: 2,
+                duration: 3,
                 ease: 'power1.out',
                 scrollTrigger: {
                     trigger: '.hide-portfolio',
                     start: 'top bottom',
-                    end: 'top top',
+                    end: 'top 50%',
+                    scrub: true,
+                }
+            }
+        )
+        t1.fromTo(
+            '.portfolio-section',
+            {
+                position: 'sticky',
+            },
+            {
+                position: 'relative',
+                duration: 3,
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: '.hide-portfolio',
+                    start: 'top 50%',
+                    end: 'top 100%',
                     scrub: true,
                 }
             }
@@ -119,9 +136,26 @@ const Portfolio = () => {
                             <a href='https://movies-p.netlify.app/' target='_blank'><img src={web} alt='github image' /></a>
                         </div>
                     </div>
+                    <div className='card'
+                         style={{background: `url(${james})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
+                        <div className='card-details'>
+                            <a href='https://github.com/radwan50000/james-website' target='_blank'><img src={github} alt='github image'/></a>
+                            <div className='w-5/12 h-1 bg-purple500'></div>
+                            <a href='https://musical-bubblegum-933125.netlify.app/'  target='_blank'><img src={web} alt='github image' /></a>
+                        </div>
+
+                    </div>
+                    <div className='card'
+                         style={{background: `url(${movie})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
+                        <div className='card-details'>
+                            <a href='https://github.com/radwan50000/Movie_Project' target='_blank'><img src={github} alt='github image' /></a>
+                            <div className='w-5/12 h-1 bg-purple500'></div>
+                            <a href='https://movies-p.netlify.app/' target='_blank'><img src={web} alt='github image' /></a>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <div className='w-full  end-portfolio' style={{height: 'calc(100vh)'}}></div>
+            <div className='w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
             <div className='w-full  hide-portfolio' style={{height: 'calc(100vh)'}}></div>
         </>
     )
