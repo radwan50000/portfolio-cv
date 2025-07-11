@@ -5,6 +5,7 @@ import Lenis from 'lenis'
 import {ScrollTrigger} from 'gsap/all';
 import {gsap} from 'gsap';
 import {useRef} from 'react';
+import Services from "./Services.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,6 +30,7 @@ const FullPage = () => {
             <Home />
             <Portfolio />
             <About />
+            <Services />
             <div
                 ref={mouseShape}
                 className='w-5 h-5 z-[-1] rounded-full border-1 border-purple200 fixed pointer-none'></div>
