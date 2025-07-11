@@ -38,7 +38,7 @@
 
 @layer component{
     .card{
-        @apply w-[400px] h-[600px] rounded-md bg-purple200 overflow-hidden;
+        @apply w-[300px] h-[400px] rounded-md bg-purple200 overflow-hidden;
     }
 
 
@@ -86,7 +86,7 @@
     }
 
     .service-card{
-        @apply flex flex-row items-center gap-4 opacity-0;
+        @apply flex flex-row items-center gap-4;
     }
 
     .service-card img{

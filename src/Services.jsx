@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
     const t1 = gsap.timeline();
     const t2 = gsap.timeline();
+    const t3 = gsap.timeline();
 
     useGSAP(() => {
         t1.fromTo(
@@ -48,7 +49,7 @@ const Services = () => {
             }
         )
 
-        t2.fromTo(
+        t3.fromTo(
             '.service-card',
             {
                 opacity: 0,
@@ -57,8 +58,8 @@ const Services = () => {
             {
                 opacity: 0.4,
                 translateX: '0',
-                ease: 'power1.in',
-                stagger: 2,
+                ease: 'power1.out',
+                stagger: 0.1,
                 scrollTrigger: {
                     trigger: '#start-service',
                     start: 'top bottom',
@@ -68,13 +69,13 @@ const Services = () => {
             }
         )
 
-        t1.to(
+        t3.to(
             '.service-card',
             {
                 opacity: 1,
                 duration: 2,
-                ease: 'power1.in',
-                stagger: 2,
+                ease: 'power1.out',
+                stagger: 0.1,
                 scrollTrigger: {
                     trigger: '#service-cards-scroll',
                     start: 'top bottom',
