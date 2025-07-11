@@ -136,23 +136,6 @@ const Portfolio = () => {
                             <a href='https://movies-p.netlify.app/' target='_blank'><img src={web} alt='github image' /></a>
                         </div>
                     </div>
-                    <div className='card'
-                         style={{background: `url(${james})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
-                        <div className='card-details'>
-                            <a href='https://github.com/radwan50000/james-website' target='_blank'><img src={github} alt='github image'/></a>
-                            <div className='w-5/12 h-1 bg-purple500'></div>
-                            <a href='https://musical-bubblegum-933125.netlify.app/'  target='_blank'><img src={web} alt='github image' /></a>
-                        </div>
-
-                    </div>
-                    <div className='card'
-                         style={{background: `url(${movie})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
-                        <div className='card-details'>
-                            <a href='https://github.com/radwan50000/Movie_Project' target='_blank'><img src={github} alt='github image' /></a>
-                            <div className='w-5/12 h-1 bg-purple500'></div>
-                            <a href='https://movies-p.netlify.app/' target='_blank'><img src={web} alt='github image' /></a>
-                        </div>
-                    </div>
                 </div>
             </section>
             <div className='w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
