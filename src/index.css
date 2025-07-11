@@ -86,7 +86,7 @@
     }
 
     .service-card{
-        @apply flex flex-row items-center gap-4;
+        @apply flex flex-row items-center gap-4 opacity-0;
     }
 
     .service-card img{

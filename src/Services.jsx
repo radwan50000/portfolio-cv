@@ -68,11 +68,8 @@ const Services = () => {
             }
         )
 
-        t1.fromTo(
+        t1.to(
             '.service-card',
-            {
-                opacity: 0.4,
-            },
             {
                 opacity: 1,
                 duration: 2,
