@@ -36,6 +36,7 @@
 
 @theme{
     --color-pageColor: #272327;
+    --color-darkBG: #1e1c1e;
     --color-purple200: #bb7de7;
     --color-purple200Trans: rgba(255, 255, 255, 0.18);
     --color-purple500: #413149;
