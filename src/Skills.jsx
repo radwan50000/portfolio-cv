@@ -29,6 +29,7 @@ const Skills = () => {
     const start_skills = useRef();
     const start_cards = useRef();
     const skill_container = useRef();
+    const end_skills = useRef();
 
 
     useGSAP( () => {
@@ -95,16 +96,37 @@ const Skills = () => {
             },
             {
                 delay: 2,
-                translateX: '-90%',
+                translateX: '-80%',
                 ease: 'power1',
                 scrollTrigger: {
                     trigger: start_cards.current,
                     start: 'top 50%',
-                    end: 'bottom top',
+                    end: 'bottom 70%',
                     scrub: true,
                 }
             }
         )
+
+
+        t1.fromTo(
+            '.skill-section-container',
+            {
+                translateY: '0',
+            },
+            {
+                translateY: '-120%',
+                ease: 'power1',
+                scrollTrigger: {
+                    trigger: end_skills.current,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                }
+            }
+        )
+
+
+
 
     },[]);
 
@@ -113,108 +135,114 @@ const Skills = () => {
             <section
                 className='skills-section flex flex-col
                     w-[90%] sticky top-0 pt-8 h-dvh mx-auto shrink-0'>
-                    <div
-                        className='flex items-center gap-8'>
-                        <h1
-                            ref={about_header}
-                            className='text-8xl text-purple200 font-bold'>
-                            SKILLS
-                        </h1>
-                        <div className='h-1 bg-purple200'
-                             ref={purple_line}
-                             id='purple-line-skills'
-                        ></div>
-                    </div>
-                    <div
-                        ref={skill_container}
-                        className='flex items-center gap-16 pt-16 w-fit
+                    <div className='skill-section-container'>
+                        <div
+                            className='flex items-center gap-8'>
+                            <h1
+                                ref={about_header}
+                                className='text-8xl text-purple200 font-bold'>
+                                SKILLS
+                            </h1>
+                            <div className='h-1 bg-purple200'
+                                 ref={purple_line}
+                                 id='purple-line-skills'
+                            ></div>
+                        </div>
+                        <div
+                            ref={skill_container}
+                            className='flex items-center gap-16 pt-16 w-fit
                     flex-row shrink-0'>
 
-                        <div
-                            className='skill-card'>
-                            <HTML5/>
-                            <p>
-                                HTML is used to build the structural foundation of any webpage. It defines and organizes the content that appears in the browser, such as headings, paragraphs, images, videos, and links. Developers use HTML to create forms for user input (like login or contact pages), embed multimedia content, and semantically organize the document for better SEO and accessibility. It serves as the skeleton on which all styles and interactions are built, and it’s essential for creating any visual layout in the browser.
-                            </p>
+                            <div
+                                className='skill-card'>
+                                <HTML5/>
+                                <p>
+                                    HTML is used to build the structural foundation of any webpage. It defines and organizes the content that appears in the browser, such as headings, paragraphs, images, videos, and links. Developers use HTML to create forms for user input (like login or contact pages), embed multimedia content, and semantically organize the document for better SEO and accessibility. It serves as the skeleton on which all styles and interactions are built, and it’s essential for creating any visual layout in the browser.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <CSS3 />
+                                <p>
+                                    CSS is used to style the appearance of HTML elements. It allows developers to control colors, fonts, spacing, layout, and responsiveness. With CSS, you can create flexible designs that adapt to various screen sizes using features like media queries, flexbox, and grid. It is essential for giving websites their look and feel, managing themes like dark and light modes, creating animations and transitions, and improving the overall user experience by visually enhancing every part of a web page.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <JavaScript />
+                                <p>
+                                    JavaScript is used to bring interactivity and dynamic behavior to websites. It controls how the page responds to user actions like clicks, input, and scrolling. Developers use it to fetch and display data from servers without reloading the page, validate forms before submission, create animations, and build full-fledged applications in the browser. JavaScript also interacts with the DOM (Document Object Model) to modify content in real time, making it a key tool for modern interactive and responsive websites.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <Sass />
+                                <p>
+                                    SASS is used to write more powerful and maintainable stylesheets by extending regular CSS with additional features like variables, functions, nesting, and mixins. It is especially helpful in large projects where managing repeated values and long style rules becomes difficult. With SASS, developers can organize code better, reuse styles efficiently, and implement complex logic like loops and conditionals directly in their stylesheets. It compiles down to regular CSS, making it fully compatible with all browsers.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <TailwindCSS />
+                                <p>
+                                    Tailwind CSS is used to build fast and responsive UIs directly in HTML using utility classes. Instead of writing custom CSS, developers apply pre-defined classes like bg-blue-500, p-4, or text-center to style elements. This approach speeds up development, enforces design consistency, and reduces the need for writing traditional CSS. Tailwind is especially useful in modern frontend development where rapid prototyping and clean, component-based design are priorities. It’s also highly customizable and works seamlessly with frameworks like React.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <React />
+                                <p>
+                                    React is used to build dynamic and component-based user interfaces. Developers use React to create reusable UI components that manage their own state and update efficiently using a virtual DOM. It’s widely used for single-page applications (SPAs), where content changes dynamically without reloading the page. React simplifies complex UI logic and promotes clean, modular code. It supports tools like hooks (useState, useEffect) for managing component behavior, making it ideal for building modern, interactive web applications.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <img src={gsap_icon} alt={'gsap icon'} />
+                                <p>
+                                    GSAP is used to create advanced animations and motion effects in websites. It provides precise control over how elements move, scale, fade, or rotate, and supports timelines and scroll-based triggers for complex sequences. Developers use GSAP to animate DOM elements, SVGs, and canvas content, making it perfect for interactive landing pages, storytelling websites, or anything requiring rich animation. It integrates smoothly with vanilla JavaScript or frameworks like React and offers smoother performance than CSS animations in many cases.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <MicrosoftSQLServer2 />
+                                <p>
+                                    SQL is used to manage and interact with data in relational databases. It lets you query, insert, update, and delete records using simple commands like SELECT and INSERT. SQL is essential for working with structured data and supports filtering, sorting, and joining tables. It's widely used in backend development, data analysis, and reporting. Popular databases like MySQL and PostgreSQL use SQL as their core language.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <Git />
+                                <p>
+                                    Git is used to manage code changes and track version history in development projects. It allows developers to create branches for experimenting, collaborate with teammates, and safely merge new features or fixes into the main codebase. Git makes it easy to roll back changes if something breaks and keeps a record of who changed what and when. It's essential in both solo and team projects, ensuring smooth collaboration and code integrity over time.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <GitHubLight />
+                                <p>
+                                    GitHub is used to host Git repositories in the cloud and enable collaboration between developers. It provides tools for version control, code review, issue tracking, and project management. Developers use GitHub to showcase their projects, contribute to open-source software, and work on shared codebases through pull requests. It’s also used for deploying static sites (via GitHub Pages) and integrating with CI/CD pipelines for automated testing and deployment, making it an all-in-one platform for software development.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <Bash />
+                                <p>
+                                    Bash is used to interact with the operating system via the command line. Developers use Bash to navigate files, automate repetitive tasks, and run scripts that compile code, install packages, or deploy applications. It’s commonly used in software development, especially in Linux environments, DevOps workflows, and backend setups. With Bash, you can write scripts to streamline your workflow, manage servers, and perform complex operations with just a few lines of code.
+                                </p>
+                            </div>
                         </div>
-                        <div
-                            className='skill-card'>
-                            <CSS3 />
-                            <p>
-                                CSS is used to style the appearance of HTML elements. It allows developers to control colors, fonts, spacing, layout, and responsiveness. With CSS, you can create flexible designs that adapt to various screen sizes using features like media queries, flexbox, and grid. It is essential for giving websites their look and feel, managing themes like dark and light modes, creating animations and transitions, and improving the overall user experience by visually enhancing every part of a web page.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <JavaScript />
-                            <p>
-                                JavaScript is used to bring interactivity and dynamic behavior to websites. It controls how the page responds to user actions like clicks, input, and scrolling. Developers use it to fetch and display data from servers without reloading the page, validate forms before submission, create animations, and build full-fledged applications in the browser. JavaScript also interacts with the DOM (Document Object Model) to modify content in real time, making it a key tool for modern interactive and responsive websites.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <Sass />
-                            <p>
-                                SASS is used to write more powerful and maintainable stylesheets by extending regular CSS with additional features like variables, functions, nesting, and mixins. It is especially helpful in large projects where managing repeated values and long style rules becomes difficult. With SASS, developers can organize code better, reuse styles efficiently, and implement complex logic like loops and conditionals directly in their stylesheets. It compiles down to regular CSS, making it fully compatible with all browsers.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <TailwindCSS />
-                            <p>
-                                Tailwind CSS is used to build fast and responsive UIs directly in HTML using utility classes. Instead of writing custom CSS, developers apply pre-defined classes like bg-blue-500, p-4, or text-center to style elements. This approach speeds up development, enforces design consistency, and reduces the need for writing traditional CSS. Tailwind is especially useful in modern frontend development where rapid prototyping and clean, component-based design are priorities. It’s also highly customizable and works seamlessly with frameworks like React.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <React />
-                            <p>
-                                React is used to build dynamic and component-based user interfaces. Developers use React to create reusable UI components that manage their own state and update efficiently using a virtual DOM. It’s widely used for single-page applications (SPAs), where content changes dynamically without reloading the page. React simplifies complex UI logic and promotes clean, modular code. It supports tools like hooks (useState, useEffect) for managing component behavior, making it ideal for building modern, interactive web applications.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <img src={gsap_icon} alt={'gsap icon'} />
-                            <p>
-                                GSAP is used to create advanced animations and motion effects in websites. It provides precise control over how elements move, scale, fade, or rotate, and supports timelines and scroll-based triggers for complex sequences. Developers use GSAP to animate DOM elements, SVGs, and canvas content, making it perfect for interactive landing pages, storytelling websites, or anything requiring rich animation. It integrates smoothly with vanilla JavaScript or frameworks like React and offers smoother performance than CSS animations in many cases.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <MicrosoftSQLServer2 />
-                            <p>
-                                SQL is used to manage and interact with data in relational databases. It lets you query, insert, update, and delete records using simple commands like SELECT and INSERT. SQL is essential for working with structured data and supports filtering, sorting, and joining tables. It's widely used in backend development, data analysis, and reporting. Popular databases like MySQL and PostgreSQL use SQL as their core language.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <Git />
-                            <p>
-                                Git is used to manage code changes and track version history in development projects. It allows developers to create branches for experimenting, collaborate with teammates, and safely merge new features or fixes into the main codebase. Git makes it easy to roll back changes if something breaks and keeps a record of who changed what and when. It's essential in both solo and team projects, ensuring smooth collaboration and code integrity over time.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <GitHubLight />
-                            <p>
-                                GitHub is used to host Git repositories in the cloud and enable collaboration between developers. It provides tools for version control, code review, issue tracking, and project management. Developers use GitHub to showcase their projects, contribute to open-source software, and work on shared codebases through pull requests. It’s also used for deploying static sites (via GitHub Pages) and integrating with CI/CD pipelines for automated testing and deployment, making it an all-in-one platform for software development.
-                            </p>
-                        </div>
-                        <div
-                            className='skill-card'>
-                            <Bash />
-                            <p>
-                                Bash is used to interact with the operating system via the command line. Developers use Bash to navigate files, automate repetitive tasks, and run scripts that compile code, install packages, or deploy applications. It’s commonly used in software development, especially in Linux environments, DevOps workflows, and backend setups. With Bash, you can write scripts to streamline your workflow, manage servers, and perform complex operations with just a few lines of code.
-                            </p>
-                        </div>
-
-
-
-
                     </div>
             </section>
             <div className='h-dvh' ref={start_skills}></div>
             <div className='h-[300vh]' ref={start_cards}></div>
+
+            {/*Contact Me Section !!!!!!!!!!!!!!!!!!!!!!*/}
+
+            <section
+                    id='contact-me-section'
+                    className='h-dvh w-full'
+                    ref={end_skills}>
+            </section>
         </>
     )
 }

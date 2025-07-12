@@ -8,6 +8,7 @@ import {useRef} from 'react';
 import Services from "./Services.jsx";
 import Skills from './Skills.jsx';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const FullPage = () => {
