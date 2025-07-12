@@ -3,7 +3,18 @@ import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/all';
 import {useRef} from 'react';
 import gsap_icon from '../public/gsap_icon.svg';
-import {Bash, CSS3, Git, React, GitHubLight, HTML5, JavaScript, Sass, TailwindCSS} from "developer-icons";
+import {
+    Bash,
+    CSS3,
+    Git,
+    React,
+    GitHubLight,
+    HTML5,
+    JavaScript,
+    Sass,
+    TailwindCSS,
+    MicrosoftSQLServer, MicrosoftSQLServer2
+} from "developer-icons";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -80,11 +91,11 @@ const Skills = () => {
         t1.fromTo(
             skill_container.current,
             {
-                translateX: '0',
+                translateX: '0%',
             },
             {
                 delay: 2,
-                translateX: '-200%',
+                translateX: '-90%',
                 ease: 'power1',
                 scrollTrigger: {
                     trigger: start_cards.current,
@@ -116,7 +127,7 @@ const Skills = () => {
                     </div>
                     <div
                         ref={skill_container}
-                        className='flex items-center gap-16 pt-16
+                        className='flex items-center gap-16 pt-16 w-fit
                     flex-row shrink-0'>
 
                         <div
@@ -166,6 +177,13 @@ const Skills = () => {
                             <img src={gsap_icon} alt={'gsap icon'} />
                             <p>
                                 GSAP is used to create advanced animations and motion effects in websites. It provides precise control over how elements move, scale, fade, or rotate, and supports timelines and scroll-based triggers for complex sequences. Developers use GSAP to animate DOM elements, SVGs, and canvas content, making it perfect for interactive landing pages, storytelling websites, or anything requiring rich animation. It integrates smoothly with vanilla JavaScript or frameworks like React and offers smoother performance than CSS animations in many cases.
+                            </p>
+                        </div>
+                        <div
+                            className='skill-card'>
+                            <MicrosoftSQLServer2 />
+                            <p>
+                                SQL is used to manage and interact with data in relational databases. It lets you query, insert, update, and delete records using simple commands like SELECT and INSERT. SQL is essential for working with structured data and supports filtering, sorting, and joining tables. It's widely used in backend development, data analysis, and reporting. Popular databases like MySQL and PostgreSQL use SQL as their core language.
                             </p>
                         </div>
                         <div
