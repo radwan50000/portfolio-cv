@@ -117,6 +117,14 @@
     .skill-card img{
         @apply size-15;
     }
+
+    .social-links{
+        @apply py-2 px-4 border-2 border-textColor rounded-2xl bg-pageColor transition-[.4s] cursor-pointer;
+    }
+
+    .social-links:hover{
+        @apply bg-textColor text-pageColor;
+    }
 }
 
 body{
