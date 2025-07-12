@@ -5,6 +5,7 @@ import movie from './assets/movies.png';
 import james from './assets/james.png';
 import github from './assets/github.png';
 import web from './assets/web.png';
+import old_portfolio from './assets/old_portfolio.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,7 +127,6 @@ const Portfolio = () => {
                             <div className='w-5/12 h-1 bg-purple500'></div>
                             <a href='https://musical-bubblegum-933125.netlify.app/'  target='_blank'><img src={web} alt='github image' /></a>
                         </div>
-
                     </div>
                     <div className='card'
                         style={{background: `url(${movie})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
@@ -136,10 +136,18 @@ const Portfolio = () => {
                             <a href='https://movies-p.netlify.app/' target='_blank'><img src={web} alt='github image' /></a>
                         </div>
                     </div>
+                    <div className='card'
+                         style={{background: `url(${old_portfolio})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
+                        <div className='card-details'>
+                            <a href='https://github.com/radwan50000/portfolio/tree/main' target='_blank'><img src={github} alt='github image' /></a>
+                            <div className='w-5/12 h-1 bg-purple500'></div>
+                            <a href='https://radwan50000.github.io/' target='_blank'><img src={web} alt='github image' /></a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <div className='w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
-            <div className='w-full  hide-portfolio' style={{height: 'calc(100vh)'}}></div>
+            <div className='w-full  hide-portfolio' style={{height: 'calc(20vh)'}}></div>
         </>
     )
 }

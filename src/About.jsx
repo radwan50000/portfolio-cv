@@ -34,7 +34,7 @@ const About = () => {
                     opacity: 0,
                 },
                 {
-                    width: '60%',
+                    width: `calc(100% - (4.5rem * ${'about me'.length}))`,
                     opacity: 1,
                     ease: 'power1.out',
                     scrollTrigger: {
@@ -120,6 +120,7 @@ const About = () => {
                 }
             )
 
+
         }
     ,[]);
 
@@ -169,7 +170,7 @@ const About = () => {
                 id='text-first-box'
                 className='h-[200vh]'></div>
             <div id='end-about-scroll' className='h-[100vh]'></div>
-            <div id='remove-about-sticky' className='h-[100vh]'></div>
+            <div id='remove-about-sticky' className='h-[20vh]'></div>
         </>
     )
 }

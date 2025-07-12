@@ -27,6 +27,12 @@
 }
 
 
+*::selection{
+    color: white;
+    background-color: rgba(187, 125, 231, 0.64);
+}
+
+
 
 @theme{
     --color-pageColor: #272327;
@@ -38,10 +44,8 @@
 
 @layer component{
     .card{
-        @apply w-[300px] h-[400px] rounded-md bg-purple200 overflow-hidden;
+        @apply w-[300px] h-[450px] rounded-md bg-purple200 overflow-hidden;
     }
-
-
 
     .card .card-details{
         @apply bg-purple200Trans w-full h-0
@@ -49,19 +53,21 @@
         flex select-none overflow-hidden;
         transition: .4s;
     }
+
     .card:nth-child(odd){
         @apply translate-y-16;
     }
+
     .card:nth-child(even){
         @apply translate-y-[-16px];
     }
 
     .card .card-details a{
-        @apply w-fit flex;
+        @apply w-fit flex  p-2 bg-purple200Trans rounded-full;
     }
 
     .card .card-details a img{
-        @apply w-[50px] ;
+        @apply w-[40px];
     }
 
     .card:hover .card-details{
@@ -86,7 +92,7 @@
     }
 
     .service-card{
-        @apply flex flex-row items-center gap-4;
+        @apply flex flex-row items-center gap-4 w-3/12;
     }
 
     .service-card img{
@@ -97,7 +103,19 @@
         @apply text-xl text-textColor;
     }
 
+    .skill-card{
+        @apply flex flex-col text-textColor w-[350px] h-[450px] gap-4
+        border-1 border-purple200 p-4 rounded-lg font-semibold shrink-0;
+        box-shadow: 0 0 20px #bb7de7;
+    }
 
+    .skill-card svg{
+        @apply size-15;
+    }
+
+    .skill-card img{
+        @apply size-15;
+    }
 }
 
 body{

@@ -128,7 +128,7 @@ const Home = () => {
                         <ul
                             className='flex flex-row items-center
                          justify-between w-5/12
-                         text-textColor'
+                         text-textColor select-none'
                         >
                             <li className='list cursor-pointer transition-[.4s] hover:text-purple200'>Home</li>
                             <li className='list cursor-pointer transition-[.4s] hover:text-purple200'>About</li>

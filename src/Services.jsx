@@ -38,7 +38,7 @@ const Services = () => {
             },
             {
                 opacity: 1,
-                width: '60%',
+                width: `calc(100% - (4.5rem * ${'services'.length}))`,
                 ease: 'power1.out',
                 scrollTrigger: {
                     trigger: '#start-service',
@@ -56,7 +56,7 @@ const Services = () => {
                 translateX: '-50',
             },
             {
-                opacity: 0.4,
+                opacity: 1,
                 translateX: '0',
                 ease: 'power1.out',
                 stagger: 0.1,
@@ -69,21 +69,25 @@ const Services = () => {
             }
         )
 
-        t3.to(
-            '.service-card',
+
+        t1.fromTo(
+            '#service-section',
             {
+                scale: 1,
                 opacity: 1,
-                duration: 2,
+            },
+            {
+                opacity: 0,
                 ease: 'power1.out',
-                stagger: 0.1,
                 scrollTrigger: {
-                    trigger: '#service-cards-scroll',
+                    trigger: '#end-service',
                     start: 'top bottom',
                     end: 'top top',
                     scrub: true,
                 }
             }
         )
+
 
     },[])
 
@@ -100,7 +104,7 @@ const Services = () => {
                         '>
                         SERVICES
                     </h1>
-                    <div className='rotate-[0deg] purple-line-service flex h-1 bg-purple200' style={{direction: 'rtl'}}></div>
+                    <div className='rotate-[0deg] purple-line-service flex h-1 bg-purple200'></div>
                 </div>
                 <div
                     className='flex flex-row items-center
@@ -122,7 +126,7 @@ const Services = () => {
                         <img
                             src={check}
                             alt='check image' />
-                        <p>E Commerce websites</p>
+                        <p>E-Commerce websites</p>
                     </div>
                     <div className='service-card'>
                         <img
@@ -157,7 +161,7 @@ const Services = () => {
                 </div>
             </section>
             <div id='start-service' className='h-dvh'></div>
-            <div id='service-cards-scroll' className='h-dvh'></div>
+            <div id='end-service' className='h-dvh'></div>
         </>
     )
 }
