@@ -87,6 +87,11 @@ body{
 }
 
 @layer component{
+    .bg{
+        background: url('./assets/dots.png') ;
+        background-size: 100%;
+    }
+
     .nav-list{
         @apply cursor-pointer transition-[.4s] hover:text-purple200
         max-2xl:text-sm
@@ -162,7 +167,7 @@ body{
     .skill-card{
         @apply flex flex-col text-textColor w-[350px] h-[450px] gap-4
         border-1 border-purple200 p-4 rounded-lg font-semibold shrink-0
-        max-lg:w-[500px] max-lg:h-[650px] max-lg:text-2xl max-lg:gap-8 ;
+        max-lg:w-[500px] max-lg:h-[650px] max-lg:text-2xl max-lg:gap-8 bg-pageColor;
         box-shadow: 0 0 20px #bb7de7;
     }
 

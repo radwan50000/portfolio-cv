@@ -167,12 +167,14 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <div className='h-dvh start-about-scroll'></div>
+            <div className='w-full h-dvh absolute top-0 left-0 bg z-[-1]'></div>
+
+            <div className='bg h-dvh start-about-scroll'></div>
             <div
                 id='text-first-box'
-                className='h-[200vh]'></div>
-            <div id='end-about-scroll' className='h-[100vh]'></div>
-            <div id='remove-about-sticky' className='h-[20vh]'></div>
+                className='bg h-[200vh]'></div>
+            <div id='end-about-scroll' className='bg h-[100vh]'></div>
+            <div id='remove-about-sticky' className='bg h-[20vh]'></div>
         </>
     )
 }

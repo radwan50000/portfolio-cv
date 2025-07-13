@@ -147,7 +147,7 @@ const Portfolio = () => {
                     </div>
                 </div>
             </section>
-            <div id={'portfolio-link'} className='w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
+            <div id={'portfolio-link'} className='bg w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
             <div className='w-full  hide-portfolio' style={{height: 'calc(20vh)'}}></div>
         </>
     )

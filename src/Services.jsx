@@ -161,8 +161,8 @@ const Services = () => {
                     </div>
                 </div>
             </section>
-            <div id='start-service' className='h-dvh'></div>
-            <div id='end-service' className='h-dvh'></div>
+            <div id='start-service' className='bg h-dvh'></div>
+            <div id='end-service' className='bg h-dvh'></div>
         </>
     )
 }

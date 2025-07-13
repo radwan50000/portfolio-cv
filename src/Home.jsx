@@ -142,7 +142,7 @@ const Home = () => {
     return (
         <>
             <header className="flex w-full h-[100vh] sticky top-0 pt-4 header justify-between flex-col
-                max-2xl:w-[100vw]">
+                max-2xl:w-[100vw] bg-transparent">
                 <div className="w-[90%] mx-auto">
                     <nav className="flex flex-row items-center my-8 gap-8 justify-start w-full max-2xl:gap-2
                             max-2xl:justify-between">
@@ -204,6 +204,8 @@ const Home = () => {
                     <p>Keep Scrolling</p>
                 </div>
             </header>
+            <div className='w-full h-dvh absolute top-0 left-0 bg z-[-1]'></div>
+
             <div
                 id='ring'
                 className='w-60 h-60 rounded-full opacity-0 z-[-1]
@@ -212,7 +214,7 @@ const Home = () => {
                                 '>
 
             </div>
-            <div className='w-full  end-header' style={{height: 'calc(100vh / 2)'}}>
+            <div className='w-full bg  end-header' style={{height: 'calc(100vh / 2)'}}>
 
             </div>
             <div

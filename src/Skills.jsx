@@ -239,8 +239,8 @@ const Skills = () => {
                         </div>
                     </div>
             </section>
-            <div className='h-dvh' ref={start_skills}></div>
-            <div className='h-[300vh]' ref={start_cards}></div>
+            <div className='bg h-dvh' ref={start_skills}></div>
+            <div className='bg h-[300vh]' ref={start_cards}></div>
 
             {/*Contact Me Section !!!!!!!!!!!!!!!!!!!!!!*/}
 
