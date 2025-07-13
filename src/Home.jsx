@@ -122,6 +122,8 @@ const Home = () => {
             }
         })
 
+        
+
         t1.fromTo('#ring',{
             opacity: 1,
         },{
