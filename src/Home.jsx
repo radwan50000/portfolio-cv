@@ -122,7 +122,7 @@ const Home = () => {
             }
         })
 
-        
+
 
         t1.fromTo('#ring',{
             opacity: 1,
@@ -192,7 +192,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-4 text-textColor text-md items-center py-16
-                    max-xl:py-64'>
+                    max-xl:py-64 select-none'>
                     <div className="scroll-downs">
                         <div className="mousey">
                             <div className="scroller"></div>
