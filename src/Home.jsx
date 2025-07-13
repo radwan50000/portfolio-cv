@@ -214,7 +214,7 @@ const Home = () => {
                                 '>
 
             </div>
-            <div className='w-full bg  end-header' style={{height: 'calc(100vh / 2)'}}>
+            <div className='w-full bg  end-header' style={{height: 'calc(10vh)'}}>
 
             </div>
             <div

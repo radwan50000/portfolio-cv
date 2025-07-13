@@ -173,9 +173,9 @@ const About = () => {
             </div>
             <div
                 id='text-first-box'
-                className='bg h-[200vh]'></div>
+                className='bg h-[100vh]'></div>
             <div id='end-about-scroll' className='bg h-[100vh]'></div>
-            <div id='remove-about-sticky' className='bg h-[20vh]'></div>
+            <div id='remove-about-sticky' className='bg h-[10vh]'></div>
         </>
     )
 }

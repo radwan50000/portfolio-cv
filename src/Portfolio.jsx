@@ -147,10 +147,10 @@ const Portfolio = () => {
                     </div>
                 </div>
             </section>
-            <div id={'portfolio-link'} className='bg w-full relative z-[-10] end-portfolio' style={{height: 'calc(200vh)'}}>
+            <div id={'portfolio-link'} className='bg w-full relative z-[-10] end-portfolio' style={{height: 'calc(100vh)'}}>
                 <div className='w-full h-dvh absolute top-0 left-0 bg z-[-10] translate-y-[-100%]'></div>
             </div>
-            <div className='w-full  hide-portfolio' style={{height: 'calc(20vh)'}}></div>
+            <div className='w-full  hide-portfolio' style={{height: 'calc(10vh)'}}></div>
         </>
     )
 }
