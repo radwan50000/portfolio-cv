@@ -239,7 +239,9 @@ const Skills = () => {
                         </div>
                     </div>
             </section>
-            <div className='bg h-dvh' ref={start_skills}></div>
+            <div className='bg h-dvh relative' ref={start_skills}>
+                <div className='w-full h-dvh absolute top-0 left-0 bg z-[-2] translate-y-[-100%]'></div>
+            </div>
             <div className='bg h-[300vh]' ref={start_cards}></div>
 
             {/*Contact Me Section !!!!!!!!!!!!!!!!!!!!!!*/}

@@ -161,7 +161,9 @@ const Services = () => {
                     </div>
                 </div>
             </section>
-            <div id='start-service' className='bg h-dvh'></div>
+            <div id='start-service' className='bg h-dvh relative'>
+                <div className='w-full h-dvh absolute top-0 left-0 bg z-[-1] translate-y-[-100%]'></div>
+            </div>
             <div id='end-service' className='bg h-dvh'></div>
         </>
     )

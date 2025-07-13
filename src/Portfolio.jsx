@@ -130,7 +130,7 @@ const Portfolio = () => {
                         </div>
                     </div>
                     <div className='card'
-                        style={{background: `url(${movie})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
+                         style={{background: `url(${movie})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
                         <div className='card-details'>
                             <a href='https://github.com/radwan50000/Movie_Project' target='_blank'><img src={github} alt='github image' /></a>
                             <div className='w-5/12 h-1 bg-purple500'></div>
@@ -147,7 +147,9 @@ const Portfolio = () => {
                     </div>
                 </div>
             </section>
-            <div id={'portfolio-link'} className='bg w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
+            <div id={'portfolio-link'} className='bg w-full relative z-[-10] end-portfolio' style={{height: 'calc(200vh)'}}>
+                <div className='w-full h-dvh absolute top-0 left-0 bg z-[-10] translate-y-[-100%]'></div>
+            </div>
             <div className='w-full  hide-portfolio' style={{height: 'calc(20vh)'}}></div>
         </>
     )

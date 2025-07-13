@@ -167,9 +167,10 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <div className='w-full h-dvh absolute top-0 left-0 bg z-[-1]'></div>
 
-            <div className='bg h-dvh start-about-scroll'></div>
+            <div className='bg h-dvh relative start-about-scroll'>
+                <div className='w-full h-dvh absolute top-0 left-0 bg z-[-1] translate-y-[-100%]'></div>
+            </div>
             <div
                 id='text-first-box'
                 className='bg h-[200vh]'></div>
