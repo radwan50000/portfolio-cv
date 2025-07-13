@@ -89,11 +89,11 @@ const About = () => {
             t1.fromTo(
                 '#about-section',
                 {
-                    scale: 1,
+                    translateY: 0,
                     opacity: 1,
                 },
                 {
-                    scale: 10,
+                    translateY: '-110%',
                     opacity: 0,
                     ease: 'power1.out',
                     scrollTrigger: {
@@ -107,7 +107,7 @@ const About = () => {
             t1.fromTo(
                 '#about-section',
                 {
-                    position: 'sticky'
+                    position: 'sticky',
                 },
                 {
                     position: 'relative',
@@ -126,7 +126,9 @@ const About = () => {
 
     return (
         <>
-            <section id='about-section' className='sticky top-0 pt-8 flex flex-col gap-8 w-[90%] mx-auto'>
+            <section
+                id='about-section'
+                className='sticky top-0 pt-8 flex flex-col gap-8 w-[90%] mx-auto'>
                 <div
                     className='flex flex-row items-center gap-8'>
                     <h1
@@ -134,7 +136,7 @@ const About = () => {
                         ABOUT ME</h1>
                     <div className='rotate-[360deg] w-0 purple-line-about h-1 bg-purple200'></div>
                 </div>
-                <div className='flex flex-col'>
+                <div className='flex flex-col md:gap-y-16'>
                     <div
                         className='about-card'>
                             <div className='text-box'>

@@ -108,7 +108,8 @@ const Services = () => {
                 </div>
                 <div
                     className='flex flex-row items-center
-                        flex-wrap w-8/12 pt-32 mx-auto gap-x-32 gap-y-8'
+                        flex-wrap w-8/12 pt-32 mx-auto gap-x-32 gap-y-8
+                        md:w-10/12 md:justify-between md:gap-x-0 md:gap-y-16'
                     >
                         <div className='service-card'>
                             <img

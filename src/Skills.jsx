@@ -99,7 +99,7 @@ const Skills = () => {
             },
             {
                 delay: 2,
-                translateX: '-80%',
+                translateX: (window.innerWidth < 1280 && window.innerWidth)  > 0 ? '-90%':'-80%',
                 ease: 'power1',
                 scrollTrigger: {
                     trigger: start_cards.current,
@@ -136,7 +136,7 @@ const Skills = () => {
     return (
         <>
             <section
-                className='skills-section flex flex-col
+                className='skills-section flex flex-col overflow-x-hidden
                     w-[90%] sticky top-0 pt-8 h-dvh mx-auto shrink-0'>
                     <div className='skill-section-container'>
                         <div
@@ -243,10 +243,11 @@ const Skills = () => {
 
             <section
                     id='contact-me-section'
-                    className='h-dvh w-[90%] mx-auto flex flex-col pt-[15%]'
+                    className='h-dvh w-[90%] mx-auto flex flex-col pt-[15%]
+                        md:pt-[70%] justify-between'
                     ref={end_skills}>
                     <div
-                        className='flex w-[80%] justify-between mx-auto'>
+                        className='flex w-[80%] justify-between mx-auto md:flex-col md:gap-32'>
                         <div className='text-8xl leading-[90%] w-full mx-auto text-textColor'>
                             Get in <br/>touch <span className='text-[12rem] text-purple200'>.</span>
                         </div>
@@ -274,7 +275,7 @@ const Skills = () => {
                         </div>
                     </div>
                 <div
-                    className='relative mt-[20%]'>
+                    className='relative my-[20%] md:my-[10%]'>
                     <div className='flex flex-row w-[60%] justify-between mx-auto items-center text-textColor'>
                         <div className='social-links'>
                             <p>Facebook</p>

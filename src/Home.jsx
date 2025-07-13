@@ -121,20 +121,23 @@ const Home = () => {
 
     return (
         <>
-            <header className="w-full h-dvh sticky top-0 pt-4 header">
+            <header className="w-full h-[100vh] sticky top-0 pt-4 header
+                max-2xl:w-[100vw]">
                 <div className="w-[90%] mx-auto">
-                    <nav className="flex flex-row items-center my-8 gap-8 justify-start">
+                    <nav className="flex flex-row items-center my-8 gap-8 justify-start w-full">
                         <div id='first-purple-line' className='w-0/12 h-1 bg-purple200'></div>
                         <ul
                             className='flex flex-row items-center
                          justify-between w-5/12
-                         text-textColor select-none'
+                         text-textColor select-none
+                         md:gap-8 md:w-7/12
+                         '
                         >
-                            <li className='list cursor-pointer transition-[.4s] hover:text-purple200'>Home</li>
-                            <li className='list cursor-pointer transition-[.4s] hover:text-purple200'>About</li>
-                            <li className='list cursor-pointer transition-[.4s] hover:text-purple200'>Projects</li>
-                            <li className='list cursor-pointer transition-[.4s] hover:text-purple200'>Services</li>
-                            <li className='list cursor-pointer transition-[.4s] hover:text-purple200'>Contact</li>
+                            <li className='nav-list list'>Home</li>
+                            <li className='nav-list list'>About</li>
+                            <li className='nav-list list'>Projects</li>
+                            <li className='nav-list list'>Services</li>
+                            <li className='nav-list list'>Contact</li>
                         </ul>
                         <div id='second-purple-line' className='w-0/12 h-1 bg-purple200'></div>
                     </nav>
@@ -147,7 +150,9 @@ const Home = () => {
                             <h1 className='flex text-purple200 text-[6rem] leading-[100%] font-bold my-8 h-text'>
                                 Muhammed Elsayed
                             </h1>
-                            <p className='text-textColor w-9/12 h-text cairo leading-[150%]'>
+                            <p
+                                className='text-textColor w-9/12 h-text cairo leading-[150%]
+                                    md:text-2xl'>
                                 Passionate about crafting user-friendly and visually engaging websites. I focus on creating smooth, responsive experiences that align with modern design and performance standards. Detail-oriented, reliable, and always aiming to deliver intuitive and accessible interfaces that users enjoy.
                             </p>
                         </div>
@@ -164,9 +169,10 @@ const Home = () => {
             </header>
             <div
                 id='ring'
-                className='w-60 h-60 rounded-full opacity-0 z-90
+                className='w-60 h-60 rounded-full opacity-0 z-[-1]
                                 border-dashed border-3 border-purple200
-                                fixed left-0 translate-x-[-50%] top-[60%] bg-pageColor'>
+                                fixed right-0 translate-x-[-50%] top-[60%]
+                                '>
 
             </div>
             <div className='w-full  end-header' style={{height: 'calc(100vh / 2)'}}>
