@@ -248,7 +248,7 @@ const Skills = () => {
 
             <section
                     id='contact-me-section'
-                    className='h-dvh w-[90%] mx-auto flex flex-col pt-[15%] absolute z-99 left-[50%] translate-x-[-50%]
+                    className='bg h-dvh w-[100%] px-[5%] mx-auto flex flex-col pt-[15%] absolute z-50 left-[50%] translate-x-[-50%]
                         max-xl:pt-auto justify-between'
                     ref={end_skills}>
                     <div
