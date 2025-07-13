@@ -46,7 +46,7 @@
 @layer component{
     .nav-list{
         @apply cursor-pointer transition-[.4s] hover:text-purple200
-        md:text-xl;
+        max-xl:text-xl;
     }
 
     .card{
@@ -87,12 +87,12 @@
     .about-card{
         @apply rounded-md p-8 w-full text-textColor
         leading-[150%] text-2xl
-        md:px-0;
+        max-xl:px-0;
     }
 
     .about-card .text-box{
         @apply w-6/12
-            md:w-11/12 md:text-3xl md:leading-[170%];
+        max-xl:w-11/12 max-xl:text-3xl max-xl:leading-[170%];
     }
 
     .about-card:nth-child(even){
@@ -101,7 +101,7 @@
 
     .service-card{
         @apply flex flex-row items-center gap-4 w-3/12
-            md:w-5/12;
+        max-xl:w-5/12;
     }
 
     .service-card img{
@@ -110,13 +110,13 @@
 
     .service-card p{
         @apply text-xl text-textColor
-            md:text-3xl;
+        max-xl:text-3xl;
     }
 
     .skill-card{
         @apply flex flex-col text-textColor w-[350px] h-[450px] gap-4
         border-1 border-purple200 p-4 rounded-lg font-semibold shrink-0
-        md:w-[400px] md:h-[550px] md:text-xl;
+        max-xl:w-[400px] max-xl:h-[550px] max-xl:text-xl;
         box-shadow: 0 0 20px #bb7de7;
     }
 

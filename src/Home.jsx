@@ -130,7 +130,7 @@ const Home = () => {
                             className='flex flex-row items-center
                          justify-between w-5/12
                          text-textColor select-none
-                         md:gap-8 md:w-7/12
+                         max-xl:gap-8 max-xl:w-7/12
                          '
                         >
                             <li className='nav-list list'>Home</li>
@@ -152,7 +152,7 @@ const Home = () => {
                             </h1>
                             <p
                                 className='text-textColor w-9/12 h-text cairo leading-[150%]
-                                    md:text-2xl'>
+                                    max-xl:text-2xl'>
                                 Passionate about crafting user-friendly and visually engaging websites. I focus on creating smooth, responsive experiences that align with modern design and performance standards. Detail-oriented, reliable, and always aiming to deliver intuitive and accessible interfaces that users enjoy.
                             </p>
                         </div>

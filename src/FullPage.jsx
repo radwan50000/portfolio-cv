@@ -36,7 +36,8 @@ const FullPage = () => {
             <Skills />
             <div
                 ref={mouseShape}
-                className='w-5 h-5 z-[-1] rounded-full border-1 border-purple200 fixed pointer-none'></div>
+                className='w-5 h-5 z-[-1] rounded-full border-1 border-purple200 fixed pointer-none
+                    md:hidden'></div>
         </>
     )
 }

@@ -120,7 +120,7 @@ const Portfolio = () => {
                 </div>
                 <div
                     className='flex flex-row items-center justify-start m-32 gap-16
-                        md:flex-wrap md:mx-16 md:justify-center md-'>
+                        max-xl:flex-wrap max-xl:mx-16 max-xl:justify-center'>
                     <div className='card'
                          style={{background: `url(${james})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
                         <div className='card-details'>
