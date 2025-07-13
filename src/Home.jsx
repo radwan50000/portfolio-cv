@@ -13,7 +13,7 @@ const Home = () => {
 
     useGSAP(() => {
         t1.to('#first-purple-line',{
-            width: '16.7%',
+            width: window.innerWidth < 1500 && window.innerWidth > 760 ?'8%':'16.7%',
             duration: 1,
         });
 
@@ -29,7 +29,7 @@ const Home = () => {
                     ease: 'expo.out',
                 })
         t1.to('#second-purple-line',{
-            width: '30%',
+            width: window.innerWidth < 1500 && window.innerWidth > 760 ?'20%':'30%',
             duration: 1,
         })
 
@@ -62,7 +62,7 @@ const Home = () => {
             {
                 translateX: '-150%',
                 left: 0,
-                top: '60%'
+                top: window.innerWidth < 1500 && window.innerWidth > 760 ?'75%':'60%',
             },
             {
                 translateX: '0%'
@@ -144,13 +144,14 @@ const Home = () => {
             <header className="flex w-full h-[100vh] sticky top-0 pt-4 header justify-between flex-col
                 max-2xl:w-[100vw]">
                 <div className="w-[90%] mx-auto">
-                    <nav className="flex flex-row items-center my-8 gap-8 justify-start w-full">
+                    <nav className="flex flex-row items-center my-8 gap-8 justify-start w-full max-2xl:gap-2
+                            max-2xl:justify-between">
                         <div id='first-purple-line' className='w-0/12 h-1 bg-purple200'></div>
                         <ul
                             className='flex flex-row items-center
                          justify-between w-5/12
                          text-textColor select-none
-                         max-xl:gap-8 max-xl:w-7/12
+                         max-lg:gap-8 max-lg:w-7/12 max-2xl:gap-5
                          '
                         >
                             <li className='nav-list list'>Home</li>
@@ -172,8 +173,8 @@ const Home = () => {
                                     Muhammed Elsayed
                                 </h1>
                                 <p
-                                    className='text-textColor w-9/12 h-text cairo leading-[150%]
-                                    max-xl:text-2xl'>
+                                    className='text-textColor w-9/12 h-text cairo leading-[150%] text-xl
+                                    max-lg:text-2xl'>
                                     Passionate about crafting user-friendly and visually engaging websites. I focus on
                                     creating smooth, responsive experiences that align with modern design and
                                     performance standards. Detail-oriented, reliable, and always aiming to deliver
@@ -192,7 +193,9 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-4 text-textColor text-md items-center py-16
-                    max-xl:py-64 select-none'>
+                    w-fit select-none mx-auto
+                    max-2xl:pb-30
+                    max-lg:py-64'>
                     <div className="scroll-downs">
                         <div className="mousey">
                             <div className="scroller"></div>

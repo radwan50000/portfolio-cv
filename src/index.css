@@ -89,12 +89,14 @@ body{
 @layer component{
     .nav-list{
         @apply cursor-pointer transition-[.4s] hover:text-purple200
-        max-xl:text-xl;
+        max-2xl:text-sm
+        max-lg:text-xl;
+
     }
 
     .card{
-        @apply w-[300px] h-[450px] rounded-md bg-purple200 overflow-hidden
-        max-xl:w-[400px] max-xl:h-[600px];
+        @apply w-[350px] h-[550px] rounded-md bg-purple200 overflow-hidden
+        max-lg:w-[400px] max-lg:h-[600px];
     }
 
     .card .card-details{
@@ -131,12 +133,12 @@ body{
     .about-card{
         @apply rounded-md p-8 w-full text-textColor
         leading-[150%] text-2xl
-        max-xl:px-0;
+        max-lg:px-0;
     }
 
     .about-card .text-box{
         @apply w-6/12
-        max-xl:w-11/12 max-xl:text-3xl max-xl:leading-[170%];
+        max-lg:w-11/12 max-lg:text-3xl max-lg:leading-[170%];
     }
 
     .about-card:nth-child(even){
@@ -145,7 +147,7 @@ body{
 
     .service-card{
         @apply flex flex-row items-center gap-4 w-3/12
-        max-xl:w-5/12;
+        max-lg:w-5/12;
     }
 
     .service-card img{
@@ -154,45 +156,45 @@ body{
 
     .service-card p{
         @apply text-xl text-textColor
-        max-xl:text-3xl;
+        max-lg:text-3xl;
     }
 
     .skill-card{
         @apply flex flex-col text-textColor w-[350px] h-[450px] gap-4
         border-1 border-purple200 p-4 rounded-lg font-semibold shrink-0
-        max-xl:w-[500px] max-xl:h-[650px] max-xl:text-2xl max-xl:gap-8 ;
+        max-lg:w-[500px] max-lg:h-[650px] max-lg:text-2xl max-lg:gap-8 ;
         box-shadow: 0 0 20px #bb7de7;
     }
 
     .skill-card svg{
         @apply size-15
-            max-xl:size-20;
+        max-lg:size-20;
     }
 
     .skill-card img{
         @apply size-15
-            max-xl:size-20;
+        max-lg:size-20;
     }
 
     .social-links-container{
-        @apply relative my-[2%] max-xl:my-[10%]
-            max-xl:w-[95%];
+        @apply relative my-[2%] max-lg:my-[10%]
+        max-lg:w-[95%];
     }
 
     .white-line-bg{
     @apply absolute w-[80%] h-1 bg-textColor top-[50%] translate-x-[-50%] z-[-1]
         left-[50%]
-        max-xl:w-[90%];
+    max-lg:w-[90%];
     }
 
     .SL-card-container{
         @apply flex flex-row w-[60%] justify-between mx-auto items-center text-textColor
-            max-xl:w-[80%];
+        max-lg:w-[80%];
     }
 
     .social-links{
         @apply py-2 px-4 border-2 border-textColor rounded-2xl bg-pageColor transition-[.4s] cursor-pointer
-            max-xl:text-2xl;
+        max-lg:text-2xl;
     }
 
     .social-links:hover{
