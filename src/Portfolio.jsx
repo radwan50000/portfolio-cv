@@ -120,7 +120,7 @@ const Portfolio = () => {
                 </div>
                 <div
                     className='flex flex-row items-center justify-start m-32 gap-16
-                        max-xl:flex-wrap max-xl:mx-16 max-xl:justify-center'>
+                        max-xl:flex-wrap max-xl:mx-0 max-xl:justify-center'>
                     <div className='card'
                          style={{background: `url(${james})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
                         <div className='card-details'>
@@ -147,7 +147,7 @@ const Portfolio = () => {
                     </div>
                 </div>
             </section>
-            <div className='w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
+            <div id={'portfolio-link'} className='w-full  end-portfolio' style={{height: 'calc(200vh)'}}></div>
             <div className='w-full  hide-portfolio' style={{height: 'calc(20vh)'}}></div>
         </>
     )

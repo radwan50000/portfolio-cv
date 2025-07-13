@@ -1,6 +1,29 @@
 @import 'tailwindcss';
 @import 'lenis/dist/lenis.css';
 
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+
+*::selection{
+    color: white;
+    background-color: rgba(187, 125, 231, 0.64);
+}
+
+body{
+    @apply bg-pageColor overflow-x-hidden scroll-smooth;
+}
+
+/*html{*/
+/*    @apply scroll-smooth;*/
+/*}*/
+
 .roboto {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -18,19 +41,39 @@
             "slnt" 0;
 }
 
-*{
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-            "wdth" 100;
+.scroll-downs {
+    margin: auto;
+    width :34px;
+    height: 55px;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
 }
 
 
-*::selection{
-    color: white;
-    background-color: rgba(187, 125, 231, 0.64);
-}
 
 
 
@@ -50,7 +93,8 @@
     }
 
     .card{
-        @apply w-[300px] h-[450px] rounded-md bg-purple200 overflow-hidden;
+        @apply w-[300px] h-[450px] rounded-md bg-purple200 overflow-hidden
+        max-xl:w-[400px] max-xl:h-[600px];
     }
 
     .card .card-details{
@@ -116,30 +160,56 @@
     .skill-card{
         @apply flex flex-col text-textColor w-[350px] h-[450px] gap-4
         border-1 border-purple200 p-4 rounded-lg font-semibold shrink-0
-        max-xl:w-[400px] max-xl:h-[550px] max-xl:text-xl;
+        max-xl:w-[500px] max-xl:h-[650px] max-xl:text-2xl max-xl:gap-8 ;
         box-shadow: 0 0 20px #bb7de7;
     }
 
     .skill-card svg{
-        @apply size-15;
+        @apply size-15
+            max-xl:size-20;
     }
 
     .skill-card img{
-        @apply size-15;
+        @apply size-15
+            max-xl:size-20;
+    }
+
+    .social-links-container{
+        @apply relative my-[2%] max-xl:my-[10%]
+            max-xl:w-[95%];
+    }
+
+    .white-line-bg{
+    @apply absolute w-[80%] h-1 bg-textColor top-[50%] translate-x-[-50%] z-[-1]
+        left-[50%]
+        max-xl:w-[90%];
+    }
+
+    .SL-card-container{
+        @apply flex flex-row w-[60%] justify-between mx-auto items-center text-textColor
+            max-xl:w-[80%];
     }
 
     .social-links{
-        @apply py-2 px-4 border-2 border-textColor rounded-2xl bg-pageColor transition-[.4s] cursor-pointer;
+        @apply py-2 px-4 border-2 border-textColor rounded-2xl bg-pageColor transition-[.4s] cursor-pointer
+            max-xl:text-2xl;
     }
 
     .social-links:hover{
         @apply bg-textColor text-pageColor;
     }
+
+    .top-arrow{
+        @apply fixed right-[2%] bottom-[3%]
+    border-1 border-purple200 p-2 rounded-md
+    select-none transition-[.4s] cursor-pointer hidden opacity-0;
+    }
+
+    .top-arrow:hover{
+        box-shadow: 0 0 8px #bb7de7;
+    }
 }
 
-body{
-    @apply bg-pageColor overflow-x-hidden;
-}
 
 
 

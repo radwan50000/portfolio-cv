@@ -8,7 +8,6 @@ import {useRef} from 'react';
 import Services from "./Services.jsx";
 import Skills from './Skills.jsx';
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const FullPage = () => {
@@ -37,7 +36,8 @@ const FullPage = () => {
             <div
                 ref={mouseShape}
                 className='w-5 h-5 z-[-1] rounded-full border-1 border-purple200 fixed pointer-none
-                    md:hidden'></div>
+                    max-xl:hidden'></div>
+
         </>
     )
 }

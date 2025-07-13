@@ -112,12 +112,14 @@ const Skills = () => {
 
 
         t1.fromTo(
-            '.skill-section-container',
+            '.skills-section',
             {
                 translateY: '0',
+                zIndex: 0,
             },
             {
-                translateY: '-120%',
+                translateY: '-80%',
+                zIndex: '-1',
                 ease: 'power1',
                 scrollTrigger: {
                     trigger: end_skills.current,
@@ -154,7 +156,8 @@ const Skills = () => {
                         <div
                             ref={skill_container}
                             className='flex items-center gap-16 pt-16 w-fit
-                    flex-row shrink-0'>
+                            flex-row shrink-0
+                                max-xl:pt-[15%]'>
 
                             <div
                                 className='skill-card'>
@@ -243,40 +246,45 @@ const Skills = () => {
 
             <section
                     id='contact-me-section'
-                    className='h-dvh w-[90%] mx-auto flex flex-col pt-[15%]
-                        max-xl:pt-[70%] justify-between'
+                    className='h-dvh w-[90%] mx-auto flex flex-col pt-[15%] absolute z-99 left-[50%] translate-x-[-50%]
+                        max-xl:pt-auto justify-between'
                     ref={end_skills}>
                     <div
-                        className='flex w-[80%] justify-between mx-auto max-xl:flex-col max-xl:gap-32'>
-                        <div className='text-8xl leading-[90%] w-full mx-auto text-textColor'>
-                            Get in <br/>touch <span className='text-[12rem] text-purple200'>.</span>
+                        className='flex w-[80%] justify-between mx-auto
+                            max-xl:flex-col max-xl:gap-32 max-xl:w-full'>
+                        <div className='text-8xl leading-[90%] w-full mx-auto text-textColor select-none
+                            max-xl:text-[12rem] max-xl:font-bold'>
+                            Get in <br/>touch <span className='text-[12rem] text-purple200
+                                max-xl:text-[15rem] max-xl:font-bold'
+                            >.</span>
                         </div>
-                        <div className='flex flex-row gap-32 items-start'>
-                            <div className='flex flex-col gap-8 text-purple200'>
-                                <p className='text-textColor text-3xl pl-8'>
+                        <div className='flex flex-row gap-32 items-start max-xl:flex-wrap'>
+                            <div className='flex flex-col gap-8 text-purple200 max-xl:text-3xl'>
+                                <p className='text-textColor text-3xl pl-8 max-xl:text-6xl'>
                                     Contact
                                 </p>
                                 <div className='flex flex-row gap-4 items-center '>
-                                    <img src={email} alt={'email'} className='size-5'/>
+                                    <img src={email} alt={'email'} className='size-5 max-xl:size-8 invert-100'/>
                                     <p>muhammedelsayedradwan5@gmail.com</p>
                                 </div>
                                 <div className='flex flex-row gap-4 items-center '>
-                                    <img src={phone} alt={'email'} className='size-5'/>
+                                    <img src={phone} alt={'email'} className='size-5 max-xl:size-8 invert-100'/>
                                     <p>01125941808</p>
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-8 text-purple200'>
-                                <p className='text-textColor text-3xl'>
+                            <div className='flex flex-col gap-8 text-purple200 max-xl:text-3xl'>
+                                <p className='text-textColor text-3xl max-xl:text-6xl max-xl:pl-8'>
                                     Information
                                 </p>
-                                <p>Portfolio</p>
-                                <p>Services</p>
+                                <p className='max-xl:pl-8 cursor-pointer'><a href={'#portfolio-link'}>Portfolio</a></p>
+                                <p className='max-xl:pl-8 cursor-pointer'><a href={'#start-service'}>Services</a></p>
+                                <p className='max-xl:pl-8 cursor-pointer'><a href={'https://github.com/radwan50000'} target={'_blank'}>Github</a></p>
                             </div>
                         </div>
                     </div>
                 <div
-                    className='relative my-[2%] max-xl:my-[10%]'>
-                    <div className='flex flex-row w-[60%] justify-between mx-auto items-center text-textColor'>
+                    className='social-links-container'>
+                    <div className='SL-card-container'>
                         <div className='social-links'>
                             <p>Facebook</p>
                         </div>
@@ -287,11 +295,10 @@ const Skills = () => {
                             <p>Linkedin</p>
                         </div>
                         <div className='social-links'>
-                            <p>Twitter</p>
+                            <p>Twitter ( X )</p>
                         </div>
                     </div>
-                    <div className='absolute w-[80%] h-1 bg-textColor top-[50%] translate-x-[-50%] z-[-1]
-                        left-[50%] '></div>
+                    <div className='white-line-bg'></div>
                 </div>
             </section>
         </>
