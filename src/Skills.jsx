@@ -139,10 +139,12 @@ const Skills = () => {
         <>
             <section
                 className='skills-section flex flex-col overflow-x-hidden
-                    w-[90%] sticky top-0 pt-8 h-dvh mx-auto shrink-0'>
+                sticky top-0 pt-8 h-dvh mx-auto shrink-0
+                    w-[100%]'>
                     <div className='skill-section-container'>
                         <div
-                            className='flex items-center gap-8'>
+                            className='flex items-center gap-8
+                                w-[90%] mx-auto'>
                             <h1
                                 ref={about_header}
                                 className='text-8xl text-purple200 font-bold
@@ -158,9 +160,9 @@ const Skills = () => {
                         <div
                             ref={skill_container}
                             className='flex items-center gap-16 pt-16 w-fit
-                            flex-row shrink-0
-                                max-sm:pt-[15%] max-sm:gap-0'>
-
+                            flex-row shrink-0 ml-8
+                                max-sm:pt-[15%] max-sm:gap-0
+                                max-lg:ml-4'>
                             <div
                                 className='skill-card'>
                                 <HTML5/>

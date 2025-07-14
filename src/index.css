@@ -176,7 +176,7 @@ body{
         @apply flex flex-col text-textColor w-[350px] h-[450px] gap-4
         border-1 border-purple200 p-4 rounded-lg font-semibold shrink-0
         max-sm:w-[250px] max-sm:h-[300px] max-sm:text-[0.65rem] max-sm:gap-4 max-sm:mx-5
-        bg-pageColor;
+        bg-pageColor overflow-hidden;
         box-shadow: 0 0 20px #bb7de7;
     }
 
