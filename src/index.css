@@ -162,6 +162,7 @@ body{
 
     .service-card img{
         @apply w-5 invert
+        max-sm:w-5
         max-lg:w-7;
     }
 
