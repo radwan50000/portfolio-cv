@@ -2,7 +2,7 @@ import {gsap} from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {ScrollTrigger} from 'gsap/all';
 import {useRef} from 'react';
-import gsap_icon from '../public/gsap_icon.svg';
+import gsap_icon from './assets/gsap_icon.svg';
 import email from './assets/email.svg';
 import phone from './assets/phone.svg';
 
@@ -145,10 +145,12 @@ const Skills = () => {
                             className='flex items-center gap-8'>
                             <h1
                                 ref={about_header}
-                                className='text-8xl text-purple200 font-bold'>
+                                className='text-8xl text-purple200 font-bold
+                                    max-sm:text-5xl'>
                                 SKILLS
                             </h1>
-                            <div className='h-1 bg-purple200'
+                            <div className='h-1 bg-purple200
+                                  max-sm:hidden'
                                  ref={purple_line}
                                  id='purple-line-skills'
                             ></div>
@@ -157,7 +159,7 @@ const Skills = () => {
                             ref={skill_container}
                             className='flex items-center gap-16 pt-16 w-fit
                             flex-row shrink-0
-                                max-xl:pt-[15%]'>
+                                max-sm:pt-[15%] max-sm:gap-0'>
 
                             <div
                                 className='skill-card'>
@@ -249,33 +251,41 @@ const Skills = () => {
             <section
                     id='contact-me-section'
                     className='bg h-dvh w-[100%] px-[5%] mx-auto flex flex-col pt-[15%] absolute z-50 left-[50%] translate-x-[-50%]
-                        max-xl:pt-auto justify-between'
+                        max-sm:pt-auto justify-between max-sm:pt-[3%]'
                     ref={end_skills}>
                     <div
                         className='flex w-[80%] justify-between mx-auto
-                            max-xl:flex-col max-xl:gap-32 max-xl:w-full'>
+                            max-xl:flex-col max-sm:gap-16 max-sm:w-full
+                            max-lg:gap-20'>
                         <div className='text-8xl leading-[90%] w-full mx-auto text-textColor select-none
-                            max-xl:text-[12rem] max-xl:font-bold'>
+                            max-sm:text-[5rem] max-sm:font-bold '>
                             Get in <br/>touch <span className='text-[12rem] text-purple200
-                                max-xl:text-[15rem] max-xl:font-bold'
+                                max-sm:text-[8rem] max-sm:font-bold'
                             >.</span>
                         </div>
-                        <div className='flex flex-row gap-32 items-start max-xl:flex-wrap'>
-                            <div className='flex flex-col gap-8 text-purple200 max-xl:text-3xl'>
-                                <p className='text-textColor text-3xl pl-8 max-xl:text-6xl'>
+                        <div className='flex flex-row gap-32 items-start
+                            max-sm:flex-wrap max-sm:gap-16'>
+                            <div className='flex flex-col gap-8 text-purple200
+                                max-sm:text-[0.8rem] max-sm:gap-4'>
+                                <p className='text-textColor text-3xl pl-8
+                                    max-sm:text-2xl'>
                                     Contact
                                 </p>
-                                <div className='flex flex-row gap-4 items-center '>
-                                    <img src={email} alt={'email'} className='size-5 max-xl:size-8 invert-100'/>
+                                <div className='flex flex-row gap-4 items-center'>
+                                    <img src={email} alt={'email'} className='size-5
+                                        max-sm:size-4 invert-100'/>
                                     <p>muhammedelsayedradwan5@gmail.com</p>
                                 </div>
-                                <div className='flex flex-row gap-4 items-center '>
-                                    <img src={phone} alt={'email'} className='size-5 max-xl:size-8 invert-100'/>
+                                <div className='flex flex-row gap-4 items-center'>
+                                    <img src={phone} alt={'email'} className='size-5
+                                    max-sm:size-4  invert-100'/>
                                     <p>01125941808</p>
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-8 text-purple200 max-xl:text-3xl'>
-                                <p className='text-textColor text-3xl max-xl:text-6xl max-xl:pl-8'>
+                            <div className='flex flex-col gap-8 text-purple200
+                            max-sm:text-[0.8rem] max-sm:gap-4'>
+                                <p className='text-textColor text-3xl pl-8
+                                    max-sm:text-2xl'>
                                     Information
                                 </p>
                                 <p className='max-xl:pl-8 cursor-pointer'><a href={'#portfolio-link'}>Portfolio</a></p>

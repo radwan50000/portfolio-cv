@@ -101,15 +101,21 @@ const Services = () => {
                     <h1
                         id='service-header'
                         className='text-8xl text-purple200 font-black
+                            max-sm:text-5xl
+                            max-lg:text-6xl
                         '>
                         SERVICES
                     </h1>
-                    <div className='rotate-[0deg] purple-line-service flex h-1 bg-purple200'></div>
+                    <div className='rotate-[0deg] purple-line-service flex h-1 bg-purple200
+                        max-sm:hidden'></div>
                 </div>
                 <div
                     className='flex flex-row items-center
                         flex-wrap w-8/12 pt-32 mx-auto gap-x-32 gap-y-8
-                        md:w-10/12 md:justify-between md:gap-x-0 md:gap-y-16'
+                        max-sm:w-12/12 max-sm:justify-between max-sm:gap-x-0 max-sm:gap-y-8
+                        max-sm:pt-16
+                        max-lg:w-12/12 max-lg:justify-center
+                        '
                     >
                         <div className='service-card'>
                             <img

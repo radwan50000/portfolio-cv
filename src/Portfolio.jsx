@@ -113,14 +113,18 @@ const Portfolio = () => {
                 <div className='flex flex-row items-center gap-16'>
                     <h1
                         id='portfolio-header'
-                        className='text-8xl text-purple200 font-black'>
+                        className='text-8xl text-purple200 font-black
+                            max-sm:text-4xl
+                            max-lg:text-6xl'>
                         PORTFOLIO
                     </h1>
-                    <div className='rotate-[360deg] purple-line flex h-1 bg-purple200'></div>
+                    <div className='rotate-[360deg] purple-line flex h-1 bg-purple200
+                        max-sm:hidden'></div>
                 </div>
                 <div
                     className='flex flex-row items-center justify-start m-32 gap-16
-                        max-xl:flex-wrap max-xl:mx-0 max-xl:justify-center'>
+                        max-sm:flex-wrap max-sm:mx-0 max-sm:my-8  max-sm:justify-center  max-sm:gap-4
+                        max-lg:mx-0 max-lg:my-12 max-lg:justify-center max-lg:gap-x-16 max-lg:gap-y-8 max-lg:flex-wrap'>
                     <div className='card'
                          style={{background: `url(${james})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'top'}}>
                         <div className='card-details'>

@@ -128,15 +128,19 @@ const About = () => {
         <>
             <section
                 id='about-section'
-                className='sticky top-0 pt-8 flex flex-col gap-8 w-[90%] mx-auto'>
+                className='sticky top-0 pt-8 flex flex-col gap-8 w-[90%] mx-auto max-sm:gap-4 max-sm:pt-4'>
                 <div
                     className='flex flex-row items-center gap-8'>
                     <h1
-                        className='text-purple200 text-8xl about-header font-bold'>
+                        className='text-purple200 text-8xl about-header font-bold
+                        max-sm:text-5xl
+                        max-lg:text-6xl'>
                         ABOUT ME</h1>
-                    <div className='rotate-[360deg] w-0 purple-line-about h-1 bg-purple200'></div>
+                    <div className='rotate-[360deg] w-0 purple-line-about h-1 bg-purple200 max-sm:hidden'></div>
                 </div>
-                <div className='flex flex-col md:gap-y-16'>
+                <div className='flex flex-col
+                    max-sm:gap-y-8
+                    max-lg:gap-y-16'>
                     <div
                         className='about-card'>
                             <div className='text-box'>

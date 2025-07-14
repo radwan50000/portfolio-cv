@@ -20,9 +20,6 @@ body{
     @apply bg-pageColor overflow-x-hidden scroll-smooth relative;
 }
 
-/*html{*/
-/*    @apply scroll-smooth;*/
-/*}*/
 
 .roboto {
     font-family: "Roboto", sans-serif;
@@ -41,32 +38,6 @@ body{
             "slnt" 0;
 }
 
-.scroll-downs {
-    margin: auto;
-    width :34px;
-    height: 55px;
-}
-
-.mousey {
-    width: 3px;
-    padding: 10px 15px;
-    height: 35px;
-    border: 2px solid #fff;
-    border-radius: 25px;
-    opacity: 0.75;
-    box-sizing: content-box;
-}
-
-.scroller {
-    width: 3px;
-    height: 10px;
-    border-radius: 25%;
-    background-color: #fff;
-    animation-name: scroll;
-    animation-duration: 2.2s;
-    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-    animation-iteration-count: infinite;
-}
 @keyframes scroll {
     0% { opacity: 0; }
     10% { transform: translateY(0); opacity: 1; }
@@ -87,6 +58,35 @@ body{
 }
 
 @layer component{
+
+    .scroll-downs {
+        margin: auto;
+        width :34px;
+        height: 55px;
+    }
+
+    .mousey {
+        width: 3px;
+        padding: 10px 15px;
+        height: 35px;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        opacity: 0.75;
+        box-sizing: content-box;
+    }
+
+    .scroller {
+        width: 3px;
+        height: 10px;
+        border-radius: 25%;
+        background-color: #fff;
+        animation-name: scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+        animation-iteration-count: infinite;
+    }
+
+
     .bg{
         background: url('./assets/dot.png') ;
         background-size: 10%;
@@ -95,14 +95,15 @@ body{
 
     .nav-list{
         @apply cursor-pointer transition-[.4s] hover:text-purple200
-        max-2xl:text-sm
+        max-sm:text-sm
         max-lg:text-xl;
 
     }
 
     .card{
         @apply w-[350px] h-[550px] rounded-md bg-purple200 overflow-hidden
-        max-lg:w-[400px] max-lg:h-[600px];
+        max-sm:w-[40%] max-sm:h-[33vh]
+        max-lg:w-4/12 max-lg:h-[39vh];
     }
 
     .card .card-details{
@@ -139,12 +140,14 @@ body{
     .about-card{
         @apply rounded-md p-8 w-full text-textColor
         leading-[150%] text-2xl
-        max-lg:px-0;
+        max-sm:p-0
+        max-lg:p-0;
     }
 
     .about-card .text-box{
         @apply w-6/12
-        max-lg:w-11/12 max-lg:text-3xl max-lg:leading-[170%];
+        max-sm:w-12/12  max-sm:text-sm  max-sm:leading-[170%]
+        max-lg:w-10/12  max-lg:text-xl  max-lg:leading-[170%]
     }
 
     .about-card:nth-child(even){
@@ -153,33 +156,37 @@ body{
 
     .service-card{
         @apply flex flex-row items-center gap-4 w-3/12
-        max-lg:w-5/12;
+        max-sm:w-5/12
+        max-lg:w-4/12;
     }
 
     .service-card img{
-        @apply w-5 invert;
+        @apply w-5 invert
+        max-lg:w-7;
     }
 
     .service-card p{
         @apply text-xl text-textColor
-        max-lg:text-3xl;
+        max-sm:text-sm
+        max-lg:text-2xl;
     }
 
     .skill-card{
         @apply flex flex-col text-textColor w-[350px] h-[450px] gap-4
         border-1 border-purple200 p-4 rounded-lg font-semibold shrink-0
-        max-lg:w-[500px] max-lg:h-[650px] max-lg:text-2xl max-lg:gap-8 bg-pageColor;
+        max-sm:w-[250px] max-sm:h-[300px] max-sm:text-[0.65rem] max-sm:gap-4 max-sm:mx-5
+        bg-pageColor;
         box-shadow: 0 0 20px #bb7de7;
     }
 
     .skill-card svg{
         @apply size-15
-        max-lg:size-20;
+        max-sm:size-10;
     }
 
     .skill-card img{
         @apply size-15
-        max-lg:size-20;
+        max-sm:size-10;
     }
 
     .social-links-container{
@@ -190,17 +197,19 @@ body{
     .white-line-bg{
     @apply absolute w-[80%] h-1 bg-textColor top-[50%] translate-x-[-50%] z-[-1]
         left-[50%]
-    max-lg:w-[90%];
+        max-sm:w-full
+        max-lg:w-[90%];
     }
 
     .SL-card-container{
         @apply flex flex-row w-[60%] justify-between mx-auto items-center text-textColor
+        max-sm:w-[90%]
         max-lg:w-[80%];
     }
 
     .social-links{
         @apply py-2 px-4 border-2 border-textColor rounded-2xl bg-pageColor transition-[.4s] cursor-pointer
-        max-lg:text-2xl;
+        max-sm:text-[0.55rem] max-sm:px-2 max-sm:py-1;
     }
 
     .social-links:hover{

@@ -4,7 +4,7 @@ import About from './About.jsx';
 import Lenis from 'lenis'
 import {ScrollTrigger} from 'gsap/all';
 import {gsap} from 'gsap';
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Services from "./Services.jsx";
 import Skills from './Skills.jsx';
 import { useHold } from "@technarts/react-use-hold";
@@ -19,14 +19,14 @@ const FullPage = () => {
     const [clicking, setClicking] = useState(false);
     const scrollInterval = useRef(null);
 
-    window.addEventListener('',(e)=>{})
-
     lenis.on('scroll',ScrollTrigger.update);
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
     })
 
     gsap.ticker.lagSmoothing(0);
+
+    // document.body.style.zoom = '80%';
 
     window.addEventListener('mousemove',(e) => {
         mouseShape.current.style.left = (e.clientX - (mouseShape.current.offsetWidth / 2)) + 'px';
@@ -40,7 +40,7 @@ const FullPage = () => {
         },
         onHold: () => {
             setClicking(true);
-             scrollInterval.current = setInterval(() => {
+            scrollInterval.current = setInterval(() => {
                 clicking ? window.scrollBy(0, 10):null;
             }, 16);
         },
