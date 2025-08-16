@@ -300,16 +300,16 @@ const Skills = () => {
                     className='social-links-container'>
                     <div className='SL-card-container'>
                         <div className='social-links'>
-                            <a href='https://www.linkedin.com/in/muhammed-elsayed-96b800227/' target='_blank'> <p>Facebook</p> </a>
+                            <a href='https://www.facebook.com/share/1MH15xTSbr/' target='_blank'> <p>Facebook</p> </a>
                         </div>
                         <div className='social-links'>
-                            <a href='https://www.linkedin.com/in/muhammed-elsayed-96b800227/' target='_blank'> <p>Instagram</p> </a>
+                            <a href='https://www.instagram.com/muhammed5139?igsh=Y3A2NmkzY2dnaWpi' target='_blank'> <p>Instagram</p> </a>
                         </div>
                         <div className='social-links'>
-                            <a href='https://www.linkedin.com/in/muhammed-elsayed-96b800227/' target='_blank'> <p>LinkedIn</p> </a>
+                            <a href='https://www.linkedin.com/in/muhammed-elsayed-321822378/' target='_blank'> <p>LinkedIn</p> </a>
                         </div>
                         <div className='social-links'>
-                            <a href='#' target='_blank'> <p>Twitter ( X )</p> </a>
+                            <a href='https://x.com/Muhamme75747739' target='_blank'> <p>Twitter ( X )</p> </a>
                         </div>
                     </div>
                     <div className='white-line-bg'></div>
