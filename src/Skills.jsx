@@ -16,7 +16,7 @@ import {
     JavaScript,
     Sass,
     TailwindCSS,
-    MicrosoftSQLServer, MicrosoftSQLServer2
+    MicrosoftSQLServer, MicrosoftSQLServer2, Bootstrap5, WordPress
 } from "developer-icons";
 
 
@@ -217,6 +217,20 @@ const Skills = () => {
                                 <MicrosoftSQLServer2 />
                                 <p>
                                     SQL is used to manage and interact with data in relational databases. It lets you query, insert, update, and delete records using simple commands like SELECT and INSERT. SQL is essential for working with structured data and supports filtering, sorting, and joining tables. It's widely used in backend development, data analysis, and reporting. Popular databases like MySQL and PostgreSQL use SQL as their core language.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <Bootstrap5 />
+                                <p>
+                                    Bootstrap is used to design and develop responsive websites with ease. It offers a grid system, prebuilt components, and utilities for layout and styling. It lets you build consistent interfaces using simple classes like container and row. Bootstrap is essential for rapid frontend development and supports customization, theming, and JavaScript plugins. It's widely used in prototyping, UI design, and web projects.
+                                </p>
+                            </div>
+                            <div
+                                className='skill-card'>
+                                <WordPress />
+                                <p>
+                                    WordPress is used to create and manage websites through a simple content management system. It lets you publish posts, add pages, and customize designs with themes and plugins. WordPress is essential for building dynamic sites and supports media uploads, SEO tools, and e-commerce features. It's widely used in blogging, business, and online stores. Popular hosts and developers rely on WordPress as their platform.
                                 </p>
                             </div>
                             <div
