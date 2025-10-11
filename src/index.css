@@ -101,13 +101,23 @@ body{
     }
 
     .card{
-        @apply w-[350px] h-[550px] rounded-md bg-purple200 overflow-hidden
+        @apply w-[350px] h-[550px] rounded-md bg-purple200 
+        overflow-hidden cursor-pointer
+        max-sm:w-[40%] max-sm:h-[33vh]
+        max-lg:w-4/12 max-lg:h-[39vh];
+    }
+
+    .project-card{
+        @apply w-[350px] h-[550px] rounded-md bg-purple200 
+        transition duration-400 ease-in-out
+        hover:shadow-[0px_0px_20px_#bb7de7]
+        overflow-hidden cursor-pointer
         max-sm:w-[40%] max-sm:h-[33vh]
         max-lg:w-4/12 max-lg:h-[39vh];
     }
 
     .card .card-details{
-        @apply bg-purple200Trans w-full h-0
+        @apply bg-purple200Trans w-full h-0 
         flex-col items-center justify-center gap-8
         flex select-none overflow-hidden;
         transition: .4s;
