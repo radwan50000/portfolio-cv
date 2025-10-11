@@ -176,7 +176,15 @@ const Skills = () => {
             <div className="skill-card">
               <img src={gsap_icon} alt="gsap icon" className="size-12" />
               <p>
-                GSAP (GreenSock Animation Platform) is used for creating high-performance animations and interactive web experiences. It provides a robust set of tools and libraries that allow developers to animate HTML elements, SVGs, canvas, and more with smooth transitions and complex sequences. GSAP is known for its speed and efficiency, making it ideal for both simple animations like fades and slides, as well as more complex timelines and effects. It also offers features like scroll-triggered animations, draggable elements, and physics-based motion.
+                GSAP (GreenSock Animation Platform) is used for creating
+                high-performance animations and interactive web experiences. It
+                provides a robust set of tools and libraries that allow
+                developers to animate HTML elements, SVGs, canvas, and more with
+                smooth transitions and complex sequences. GSAP is known for its
+                speed and efficiency, making it ideal for both simple animations
+                like fades and slides, as well as more complex timelines and
+                effects. It also offers features like scroll-triggered
+                animations, draggable elements, and physics-based motion.
               </p>
             </div>
           </div>
@@ -268,7 +276,10 @@ const Skills = () => {
                 </a>
               </p>
               <p className="max-xl:pl-8 cursor-pointer">
-                <a href={"/Muhammed_Elsayed_Radwan_FrontEnd_CV.pdf"} target={"_blank"}>
+                <a
+                  href={"/Muhammed_Elsayed_Radwan_FrontEnd_CV.pdf"}
+                  target={"_blank"}
+                >
                   CV
                 </a>
               </p>
