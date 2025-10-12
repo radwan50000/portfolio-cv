@@ -8,6 +8,7 @@ import web from "./assets/web.png";
 import ArrowImage from "./assets/arrowImage.png";
 import old_portfolio from "./assets/old_portfolio.png";
 import ProjectsData from "./ProjectsData";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,7 +112,9 @@ const Portfolio = () => {
           {ProjectsData.map((project, index) => {
             if (index > 2) return;
             return (
-              <div
+              <Link
+                to={`/projects/projectDetails/${project.id}`}
+                key={project.id}
                 className="card cardComponent"
                 style={{
                   background: `url(${project.cover})`,
@@ -119,8 +122,8 @@ const Portfolio = () => {
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "top",
                 }}
-                key={index}
-              ></div>
+              >
+              </Link>
             );
           })}
           <a href="/projects">

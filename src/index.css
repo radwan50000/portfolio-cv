@@ -101,7 +101,7 @@ body{
     }
 
     .card{
-        @apply w-[350px] h-[550px] rounded-md bg-purple200 
+        @apply w-[350px] h-[550px] rounded-md 
         overflow-hidden cursor-pointer
         max-sm:w-[40%] max-sm:h-[33vh]
         max-lg:w-4/12 max-lg:h-[39vh];
