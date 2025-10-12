@@ -46,7 +46,7 @@ const ProjectData = [
     desktopCover: todoAppDesktop,
     id: "todoApp",
     description:
-      "A modern task management app that allows users to create, organize, and track their daily tasks efficiently. Built with React and Firebase, it supports real-time database updates, authentication, and personalized task storage per user. The app features a clean interface with intuitive interactions, such as marking tasks complete and editing existing ones. The project highlights my ability to handle CRUD operations, Firebase integration, and state management in a scalable React environment.",
+      "A modern task management app that allows users to create, organize, and track their daily tasks efficiently. Built with React and TailwindCSS, it supports real-time updates, delete , edit , and personalized task storage per user. The app features a clean interface with intuitive interactions, such as marking tasks complete and editing existing ones. The project highlights my ability to handle CRUD operations.",
   },
   {
     projectName: "Weather App",
