@@ -14,99 +14,76 @@ gsap.registerPlugin(ScrollTrigger);
 const Portfolio = () => {
   const t1 = gsap.timeline();
   useGSAP(() => {
+    // Appear animations
     t1.fromTo(
       "#portfolio-header",
-      {
-        opacity: 0,
-        translateY: "-340%",
-      },
+      { opacity: 0, yPercent: -340 },
       {
         opacity: 1,
-        translateY: "0%",
+        yPercent: 0,
         duration: 2,
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".end-portfolio",
-          start: "top bottom",
-          end: "top top",
+          start: "top 90%", // start slightly before it's visible
+          end: "top 40%", // end when it's fully visible
           scrub: true,
         },
       }
     );
+
     t1.fromTo(
       ".purple-line",
-      {
-        width: 0,
-      },
+      { width: 0 },
       {
         width: "60%",
         duration: 2,
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".end-portfolio",
-          start: "top bottom",
-          end: "top top",
+          start: "top 90%",
+          end: "top 40%",
           scrub: true,
         },
       }
     );
+
     t1.fromTo(
       ".cardComponent",
-      {
-        opacity: 0,
-        translateX: "-10%",
-      },
+      { opacity: 0, xPercent: -10 },
       {
         opacity: 1,
-        translateX: "0",
+        xPercent: 0,
         duration: 2,
+        stagger: 0.3,
         ease: "power1.out",
-        stagger: 1,
         scrollTrigger: {
           trigger: ".end-portfolio",
-          start: "top bottom",
-          end: "top top",
+          start: "top 90%",
+          end: "top 40%",
           scrub: true,
         },
       }
     );
+
+    // Wait while user scrolls — then disappear
     t1.fromTo(
       ".portfolio-section",
-      {
-        opacity: 1,
-        translateX: "0",
-      },
+      { opacity: 1, yPercent: 0 },
       {
         opacity: 0,
-        translateY: "50%",
+        yPercent: 50,
         duration: 3,
         ease: "power1.out",
         scrollTrigger: {
           trigger: ".hide-portfolio",
-          start: "top bottom",
-          end: "top 50%",
+          start: "top 60%", // start disappearance later
+          end: "top 10%",
           scrub: true,
         },
       }
     );
-    t1.fromTo(
-      ".portfolio-section",
-      {
-        position: "sticky",
-      },
-      {
-        position: "relative",
-        duration: 3,
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".hide-portfolio",
-          start: "top 50%",
-          end: "top 100%",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  });
 
   return (
     <>
@@ -132,7 +109,7 @@ const Portfolio = () => {
                         max-lg:mx-0 max-lg:my-12 max-lg:justify-center max-lg:gap-x-16 max-lg:gap-y-8 max-lg:flex-wrap"
         >
           {ProjectsData.map((project, index) => {
-            if(index > 2) return;
+            if (index > 2) return;
             return (
               <div
                 className="card cardComponent"

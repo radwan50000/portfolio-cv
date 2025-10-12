@@ -21,8 +21,7 @@ const ProjectData = [
         website: 'https://radwan50000.github.io/',
         github: 'https://github.com/radwan50000/portfolio/tree/main',
         cover: old_portfolio,
-    },
-    
+    }    
 ]
 
 export default ProjectData;
